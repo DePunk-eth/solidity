@@ -685,12 +685,12 @@ bool AsmAnalyzer::validateInstructions(evmasm::Instruction _instr, SourceLocatio
 	// Similarly we assume bitwise shifting and create2 go together.
 	yulAssert(m_evmVersion.hasBitwiseShifting() == m_evmVersion.hasCreate2(), "");
 
-	// These instructions are disabled in the dialect.
-	yulAssert(
-		_instr != evmasm::Instruction::JUMP &&
-		_instr != evmasm::Instruction::JUMPI &&
-		_instr != evmasm::Instruction::JUMPDEST,
-	"");
+	// // These instructions are disabled in the dialect.
+	// yulAssert(
+	// 	_instr != evmasm::Instruction::JUMP &&
+	// 	_instr != evmasm::Instruction::JUMPI &&
+	// 	_instr != evmasm::Instruction::JUMPDEST,
+	// "");
 
 	auto errorForVM = [&](ErrorId _errorId, std::string const& vmKindMessage) {
 		m_errorReporter.typeError(

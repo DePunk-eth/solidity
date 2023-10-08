@@ -24,6 +24,8 @@ eth_policy()
 set(PROJECT_VERSION "0.8.22")
 # OSX target needed in order to support std::visit
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14")
+set(CMAKE_C_COMPILER /usr/bin/cc)
+set(CMAKE_CXX_COMPILER /usr/bin/g++)
 project(solidity VERSION ${PROJECT_VERSION} LANGUAGES C CXX)
 
 include(TestBigEndian)

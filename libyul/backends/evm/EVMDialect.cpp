@@ -165,9 +165,9 @@ std::map<YulString, BuiltinFunctionForEVM> createBuiltins(langutil::EVMVersion _
 			!evmasm::isDupInstruction(opcode) &&
 			!evmasm::isSwapInstruction(opcode) &&
 			!evmasm::isPushInstruction(opcode) &&
-			opcode != evmasm::Instruction::JUMP &&
-			opcode != evmasm::Instruction::JUMPI &&
-			opcode != evmasm::Instruction::JUMPDEST &&
+			// opcode != evmasm::Instruction::JUMP &&
+			// opcode != evmasm::Instruction::JUMPI &&
+			// opcode != evmasm::Instruction::JUMPDEST &&
 			_evmVersion.hasOpcode(opcode) &&
 			!prevRandaoException(name)
 		)
